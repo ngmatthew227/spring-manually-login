@@ -44,6 +44,7 @@ public class SecurityConfig {
         .authorizeHttpRequests(reqs -> reqs
             .requestMatchers("/user/login-as/app_admin").permitAll()
             .requestMatchers("h2-console/**").permitAll()
+            .requestMatchers("/public/**").permitAll()
             .anyRequest().authenticated())
         .userDetailsService(new MyUserDetailService(userRepo))
         .formLogin(withDefaults());
