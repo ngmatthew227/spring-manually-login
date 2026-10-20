@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+*.har
+*.exe
+.vscode/tasks.json
